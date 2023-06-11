@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<header><b>Thank you for using ReadBetter!</b></header>
+
+<br>
+  
+<!-- upload another file button !-->
+<style>
+  body {text-align: center;}
+</style>
+
+  <button onclick=back_to_home() class="cool-button" role="button">Upload Another</button>
+
+<div class="row">
+  <div class="column">
+    <!-- displays original text before bionic text -->
+    <h2>Original Text</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <div class="column">
+    <!-- displays text after bionic text conversion -->
+    <h2>Bionic Reading Text</h2>
+    <p>{{value}}</p>
+  </div>
+</div>
+  
+</body>
+
+<script>
+    function back_to_home(){
+        window.location.href = "/";
+    }
+</script>
+
+</html>

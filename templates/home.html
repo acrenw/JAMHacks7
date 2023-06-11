@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+	
+<head>
+  <title>Bionic Reading</title>
+</head>
+  
+<body>
+  
+  <header><b>Bionic Reading</b></header>
+
+	<!-- Bold the following according to bionic reading -->
+	<p><b>Bio</b>nic <b>read</b>ing is strategically bolding parts of words to make text easier to process.</p>
+	
+	<p>By having the first couple of letters in every word written in bold, your brain tends to use those as fixation points and use its previous reading experience to complete the word without actually reading the rest of the letters.</p>
+
+	<p>Those who used bionic reading tend to agree that it does have a positive effect on reading speed and comprehension.</p>
+
+  <br>
+
+  
+  <style>
+    body {text-align: center;}
+  </style>
+
+  <h2>Try Bionic Reading on your files!</h2>
+  
+  <form action = "/submitted" method="post" enctype='multipart/form-data'>  
+    <input type="file" id="file" name="file"/>
+    <br><br>
+    <button class="cool-button" role="button">Submit</button>
+  </form>
+
+  
+</body>
+	
+</html>
