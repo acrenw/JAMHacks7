@@ -43,9 +43,9 @@ def the_main_function():
 	
 	bp = bionic_main(str)
 	
-	return render_template("result.html", value=bp)
+	return render_template("result.html", ogtext=str, modifiedtext=bp)
 
 
 if __name__ == "__main__":
-  #app.run(host="0.0.0.0",debug=True)
-  app.run(debug=True)
+  app.run(host="0.0.0.0",debug=True)
+  #app.run(debug=True)
