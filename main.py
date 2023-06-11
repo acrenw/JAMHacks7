@@ -1,4 +1,6 @@
 from flask import Flask, render_template, redirect, request
+import configparser
+import requests
 from image_to_text import image_to_text_main
 from bionic import bionic_main
 from pdf_to_text import pdf_to_text_main
@@ -48,5 +50,4 @@ def the_main_function():
 
 
 if __name__ == "__main__":
-  app.run(host="0.0.0.0",debug=True)
-  #app.run(debug=True)
+  app.run(host="0.0.0.0", port=5000, debug=True)
