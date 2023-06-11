@@ -20,7 +20,8 @@ def home():
 def the_main_function():
 	uploaded_file = request.files["file"]
 	path = uploaded_file.filename
-	
+	uploaded_file.save(path)
+
 	extension = path.split(".")[-1]
 
 	if extension == "txt":
